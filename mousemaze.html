@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mouse Maze</title>
+		<style>
+			body {
+				font-family: arial;
+			}
+			h1 {
+				font-size: 100px;
+				color: white;
+			}
+			body{
+				background-color:black;
+			}
+			#svg {
+				display: block;
+				text-align:center;
+			}
+			svg {
+				background-color:white;
+			}
+			line {
+				stroke:#000000;
+				stroke-linecap:square;
+				stroke-width:15;
+			}
+			polyline {
+				stroke:#000000;
+				stroke-linecap:square;
+				stroke-width:15;
+				fill:none;
+				stroke-linejoin:miter;
+			}
+			.Finish {
+				stroke:red;
+				stroke-linecap:square;
+				stroke-width:15;
+			}
+		</style>
+		<script>
+			function GameOver() {
+				document.body.innerHTML = "<h1 align='center'>Game Over</h1>"
+			}
+			function Finish() {
+				document.body.innerHTML = "<h1 align='center'>You Won!</h1><br/><p style='color:white;' align='center'>Good job!</p><br/><div align='center'><audio align='center' src='win.mp3' controls>audio is not supported by your browser</audio></div>"
+			}
+		</script>
+	</head>
+	<body>
+		<div id="svg">
+			<svg width="1000" height="750" >
+				<line onmouseover="Finish()" class="Finish" x1="530" y1="750" x2="470" y2="750"/>
+				<polyline onmouseover="GameOver()" points="530 750, 1000 750, 1000 0, 0 0, 0 750, 470 750" />
+				<polyline onmouseover="GameOver()" points="1000 687.5, 58.8235294116 687.5, 58.8235294116 437.5, 117.647058823 437.5, 117.647058823 312.5, 58.8235294116 312.5, 58.8235294116 62.5, 235.294117646 62.5" />
+				<line onmouseover="GameOver()" x1="0" y1="375" x2="58.8235294116" y2="375" />
+				<line onmouseover="GameOver()" x1="1000" y1="375" x2="941.176470589" y2="375" />
+				<polyline onmouseover="GameOver()" points="411.764705882 687.5, 411.764705882 500, 352.94117647 500, 352.94117647 250, 588.235294116 250, 588.235294116 500, 470.588235292 500, 470.588235292 625, 941.176470589 625, 941.176470589 437.5" />
+				<polyline onmouseover="GameOver()" points="764.705882353 625, 764.705882353 187.5, 705.882352942 187.5, 705.882352942 562.5" />
+				<polyline onmouseover="GameOver()" points="764.705882353 187.5, 823.529411765 187.5, 823.529411765 500" />
+				<polyline onmouseover="GameOver()" points="764.705882353 562.5, 882.352941177 562.5, 882.352941177 312.5, 941.176470589 312.5, 941.176470589 62.5, 705.882352942 62.5" />
+				<polyline onmouseover="GameOver()" points="294.117647059 0, 294.117647059 125, 117.647058824 125, 117.647058824 250" />
+				<polyline onmouseover="GameOver()" points="470.588235294 0, 470.588235294 62.5, 352.941176471 62.5, 352.941176471 187.5, 411.764705883 187.5" />
+				<polyline onmouseover="GameOver()" points="352.941176471 187.5, 176.470588235 187.5, 176.470588235 562.5" />
+				<polyline onmouseover="GameOver()" points="294.117647059 187.5, 294.117647059 562.5, 352.941176471 562.5, 352.941176471 625, 117.647058824 625, 117.647058824 500" />
+				<line onmouseover="GameOver()" x1="235.294117647" y1="625" x2="235.294117647" y2="250" />
+				<polyline onmouseover="GameOver()" points="647.05882353 0, 647.05882353 125, 882.352941177 125, 882.352941177 250" />
+				<polyline onmouseover="GameOver()" points="529.411764706 62.5, 588.235294118 62.5, 588.235294118 187.5,529.411764706 187.5" />
+				<polyline onmouseover="GameOver()" points="588.235294118 187.5, 647.05882353 187.5, 647.05882353 562.5, 588.235294118 562.5" />
+				<polyline onmouseover="GameOver()" points="470.588235294 250, 470.588235294 125, 411.764705883 125" />
+				<line onmouseover="GameOver()" x1="470.588235294" y1="125" x2="529.411764706" y2="125" />
+			</svg>
+		</div>
+	</body>
+</html>
